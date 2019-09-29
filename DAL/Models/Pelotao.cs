@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace back_usuarios_tg.DAL.Models
 {
-    public class Usuario
+    public class Pelotao
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
@@ -11,15 +11,14 @@ namespace back_usuarios_tg.DAL.Models
         
         [BsonElement("Nome")]
         public string Nome { get; set; }
-       
-        [BsonElement("Login")]
-        public string Login { get; set; }
-        
-        [BsonElement("Senha")]
-        public string Senha { get; set; }
-        
-        [BsonElement("PerfilSuper")]
-        public bool PerfilSuper { get; set; }
- 
+
+         [BsonElement("Numero")]
+        public int Numero { get; set; }
+
+         [BsonElement("Comandante")]
+        public string Comandante { get; set; }
+
+        [BsonElement("Monitor")]
+        public string Monitor { get; set; }
     }
 }
